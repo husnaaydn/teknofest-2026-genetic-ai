@@ -11,7 +11,8 @@ from sklearn.metrics import f1_score
 # CONFIG
 # ===============================
 
-DATA_PATH = "../data/balanced_missense_2000_clean.tsv"
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_PATH = os.path.join(BASE_DIR, "data", "balanced_missense_2000_clean.tsv")
 MODEL_PATH = "../models/final_rf_model.pkl"
 RANDOM_STATE = 42
 N_SPLITS = 5
